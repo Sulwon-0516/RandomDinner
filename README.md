@@ -1,4 +1,4 @@
-# VCLab Menu random recommendation system
+# VCLab Menu random dinner system
 
 ### Prerequisite
 - python > 3.x
