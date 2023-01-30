@@ -56,7 +56,7 @@ class Menus:
     def select_category(self) -> Optional[str]:
         print("select category (with keyboard)")
         print(f"{0}: Randomly select category")
-        print(f"{1}: all cateogry")
+        print(f"{1}: all category")
         ind = 2
         for categ in self.category:
             print(f"{ind}: {categ}")
@@ -81,7 +81,7 @@ class Menus:
             print(f"randomly selected category. {categ}")
         else:
             categ = None
-            print(f"selected all cateogry")
+            print(f"selected all category")
         print(f"========================================")
         return categ
         
