@@ -16,12 +16,13 @@ class Menus:
         csv_path = os.path.join(cur_dir, MENU_CSV)
 
         with open(csv_path, encoding='utf-8') as csvfile:
-            raw_menu = csv.reader(csvfile, delimiter=',')
+            raw_menu = csv.reader(csvfile, delimiter=',', quotechar='\n')
 
             # Category lists
             self.menu = {}
             self.category = []
             for menu in raw_menu:
+                print(menu)
                 self.menu[menu[0]] = menu[1:] 
                 self.category.append(menu[0])
 
@@ -47,7 +48,7 @@ class Menus:
                 print("answer with 'y' or 'n'")
         
             if sample_again:
-                self.select_menu()
+                self.select_menu(category=category)
             else:
                 return
 
@@ -87,19 +88,30 @@ class Menus:
 
     def select_menu(self, category=None):
         # check category
+        menu_list = []
         if isinstance(category, type(None)):
             # merge ALL menus
-            menu_list = []
             for categ in list(self.menu.values()):
                 menu_list = menu_list + categ
             
         elif category not in self.category:
             raise NameError(f"{category} is not proper category.")
         else:
-
             menu_list = self.menu[category]
+            
 
-        menu = random.choices(menu_list)
+        filtered_list = []
+        for menu in menu_list:
+            if menu in self.black_list:
+                continue
+            else:
+                filtered_list.append(menu)
+
+        if len(filtered_list) == 0:
+            print("there's no more menu in selected category. Please run again with different category")
+            exit()
+
+        menu = random.choices(filtered_list)[0]
         print(f"selected menu: {menu}")
 
         self.black_list.append(menu)
