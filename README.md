@@ -9,7 +9,7 @@
 ### How to modify menus
 Check `저메추-시트1.csv`. Feel free to modify. 
 
-If you modified the menus, please push it so that all of us can eat random food.
+If you modified the menus, please push it so that all of us can enjoy various & certified random food.
 
 ### Timeline
 - (01.30) v1.0
