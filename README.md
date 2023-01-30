@@ -9,10 +9,11 @@
 ### How to modify menus
 Check `저메추-시트1.csv`. Feel free to modify. 
 
-If you modified the menus, please push it so that all of us can enjoy various & certified random food.
+If you modified menus, please push the changes here so all of us can enjoy various & certified random food.
 
 ### Timeline
-- (01.30) v1.0
+- (01.30) v1.0 (python CLI implementation)
+
 
 Todo
 - Make it with javascript and service it with web-page (through server)
