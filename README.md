@@ -16,4 +16,4 @@ If you modified menus, please push the changes here so all of us can enjoy vario
 
 
 Todo
-- Make it with javascript and service it with web-page (through server)
+- Implement it again with javascript and service it with web-page (through server)
