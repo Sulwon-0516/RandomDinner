@@ -16,4 +16,4 @@ If you modified the menus, please push it so that all of us can eat random food.
 - (01.30) v1.1 removed some bugs
 
 Todo
-- Make it with javascript and service it with web-page (through server)git a
+- Make it with javascript and service it with web-page (through server)
